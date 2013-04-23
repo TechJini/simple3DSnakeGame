@@ -15,7 +15,8 @@ Resume: R
 I used  <a href="http://mrdoob.github.io/three.js/">ThreeJS API</a> for this game developement and used CSS3 animations for interactive alert message.
 <br>
 <br>
-<b>Online Demo</b>:  <a href="http://sam3dsnakegame.tk/">sam3dsnakegame.tk</a> 
+<b>Online Demo</b>:  <a href="http://sam3dsnakegame.tk/">sam3dsnakegame.tk</a>
+<br>Please open this demo on Chrome browser for better performance.
 <br>
 <br>
 <b>Screenshots</b>:
