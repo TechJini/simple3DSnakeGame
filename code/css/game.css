@@ -1,0 +1,251 @@
+<style> body {
+	background-color: #f0f0f0;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.alertmessage {
+	position: absolute;
+	background-color: rgba(255,255,0,1.0);
+	font-family: 'Tahoma', 'Lucida sans', 'Arial';
+	font-size: 15pt;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0.0;
+	border: solid 4px rgba(10,10,10,0.5);
+	border-radius: 15px;
+	-webkit-border: solid 4px rgba(10,10,10,0.5);
+	-moz-border: solid 4px rgba(10,10,10,0.5);
+	text-align: center;
+	top: 40%;
+	left: 50%;
+	padding: 10px;
+	margin-left: -100px;
+}
+
+div.sectionBox {
+	position: absolute;
+	background: #ffffff;
+	border: 0px solid #fff;
+	padding: 13px;
+	top: 60px;
+	font-family: 'Tahoma', 'Lucida sans', 'Arial';
+	font-size: 14px;
+	border: 1px solid #aaaaaa;
+	-webkit-border: 1px solid #aaaaaa;
+	-moz-border: 1px solid #aaaaaa;
+	margin-left: 10px;
+	width: 160px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0.0;
+	border-radius: 5px;
+
+	-webkit-box-shadow: 3px 3px 3px #888;
+	box-shadow: 3px 3px 3px #888;
+}
+
+div.sectionBoxRight {
+	position: absolute;
+	background: #ffffff;
+	border: 0px solid #fff;
+	padding: 13px;
+	top: 60px;
+	font-family: 'Tahoma', 'Lucida sans', 'Arial';
+	font-size: 14px;
+	border: 1px solid #aaaaaa;
+	-webkit-border: 1px solid #aaaaaa;
+	-moz-border: 1px solid #aaaaaa;
+	position: absolute;
+	right: 0px;
+	margin-right: 10px;
+	width: auto;
+	height: auto;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0.0;
+	border-radius: 5px;
+
+	-webkit-box-shadow: 3px 3px 3px #888;
+	box-shadow: 3px 3px 3px #888;
+}
+
+header {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 46px;
+	background-color: #272e34;
+	border-bottom: 1px solid #444;
+	padding: 0;
+	font-family: 'Tahoma', 'Lucida sans', 'Arial';
+	font-size: 15pt;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0.0;
+	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.25, rgba(128,128,128,0.8)), color-stop(1, rgba(204,204,204,0.8)) );
+
+	background-image: -webkit-linear-gradient( center bottom, rgba(110,110,110,0.8) 25%, rgba(220,220,220,0.8) 100% );
+	background-image: -moz-linear-gradient( center bottom, rgba(110,110,110,0.8) 25%, rgba(220,220,220,0.8) 100% );
+	background-image: -o-linear-gradient( center bottom, rgba(110,110,110,0.8) 25%, rgba(220,220,220,0.8) 100% );
+	background-image: -ms-linear-gradient( center bottom, rgba(110,110,110,0.8) 25%, rgba(220,220,220,0.8) 100% );
+	background-image: linear-gradient( center bottom, rgba(110,110,110,0.8) 25%, rgba(220,220,220,0.8) 100% );
+
+	-webkit-box-shadow: 0px 5px 5px #333;
+	box-shadow: 0px 5px 5px #333;
+	text-align: center;
+	color: #eee;
+	text-shadow: 0 2px 0 rgba(0,0,0,0.5);
+	line-height: 45px;
+}
+
+div.loading {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0.0;
+	position: absolute;
+	width: 420px;
+	left: 45%;
+	top: 25%;
+	margin-left: -150px;
+	text-align: center;
+	font-family: 'Tahoma', 'Lucida sans', 'Arial';
+	font-size: 15px;
+	color: #222222;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.10, rgba(150,150,150,1)), color-stop(1, rgba(230,230,230,1)) );
+
+	background-image: -webkit-linear-gradient( center bottom, rgba(150,150,150,1) 10%, rgba(230,230,230,1) 100% );
+	background-image: -moz-linear-gradient( center bottom, rgba(150,150,150,1) 10%, rgba(230,230,230,1) 100% );
+	background-image: -o-linear-gradient( center bottom, rgba(150,150,150,1) 10%, rgba(230,230,230,1) 100% );
+	background-image: -ms-linear-gradient( center bottom, rgba(150,150,150,1) 10%, rgba(230,230,230,1) 100% );
+	background-image: linear-gradient( center bottom, rgba(150,150,150,1) 10%, rgba(230,230,230,1) 100% );
+	border: 2px solid #888888;
+
+	-webkit-box-shadow: 0px 5px 5px #444;
+	box-shadow: 0px 5px 5px #444;
+	border-radius: 10px;
+}
+
+#hideAll {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: eeeeee;
+	z-index: 99; /* Higher than anything else in the document */
+/* IE10 Consumer Preview */
+background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #FFFFFF 0%, #737373 100%);
+
+	background-image: -moz-radial-gradient(center bottom, ellipse farthest-corner, #FFFFFF 0%, #737373 100%);
+	background-image: -o-radial-gradient(center bottom, ellipse farthest-corner, #FFFFFF 0%, #737373 100%);
+	background-image: -ms-radial-gradient(center bottom, ellipse farthest-corner, #FFFFFF 0%, #737373 100%);
+	background-image: radial-gradient(center bottom, ellipse farthest-corner, #FFFFFF 0%, #737373 100%);
+}
+
+.progress-bar {
+	background-color: #ffffff;
+	height: 13px;
+	padding: 5px;
+	width: 290px;
+	margin: 20px;
+	border-radius: 20px;
+
+	-webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+	box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.progress-bar span {
+	display: inline-block;
+	height: 100%;
+	border-radius: 3px;
+
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+
+	-webkit-transition: width .4s ease-in-out;
+	-moz-transition: width .4s ease-in-out;
+	-o-transition: width .4s ease-in-out;
+	-ms-transition: width .4s ease-in-out;
+	transition: width .4s ease-in-out;
+}
+
+.grey span {
+	padding-top: 1px;
+	background-color: #888888;
+	border-radius: 20px;
+}
+
+.stripes span {
+	-webkit-background-size: 30px 30px;
+	-moz-background-size: 30px 30px;
+	background-size: 30px 30px;
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(.25, rgba(255, 255, 255, .15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .15)), color-stop(.75, rgba(255, 255, 255, .15)), color-stop(.75, transparent), to(transparent));
+
+	background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+
+	-webkit-animation: animate-stripes 0.8s linear infinite;
+	-moz-animation: animate-stripes 0.8s linear infinite;
+	-ms-animation: animate-stripes 0.8s linear infinite;
+	-o-animation: animate-stripes 0.8s linear infinite;
+	animation: animate-stripes 0.8s linear infinite;
+}
+
+@keyframes "animate-stripes" {
+ 0% {
+    background-position: 0 0;
+ }
+ 100% {
+    background-position: 60px 0;
+ }
+
+}
+
+@-moz-keyframes animate-stripes {
+ 0% {
+   background-position: 0 0;
+ }
+ 100% {
+   background-position: 60px 0;
+ }
+
+}
+
+@-webkit-keyframes "animate-stripes" {
+ 0% {
+   background-position: 0 0;
+ }
+ 100% {
+   background-position: 60px 0;
+ }
+
+}
+
+@-ms-keyframes "animate-stripes" {
+ 0% {
+   background-position: 0 0;
+ }
+ 100% {
+   background-position: 60px 0;
+ }
+
+}
+
+@-o-keyframes "animate-stripes" {
+ 0% {
+   background-position: 0 0;
+ }
+ 100% {
+   background-position: 60px 0;
+ }
+
+}
+
+</style>
