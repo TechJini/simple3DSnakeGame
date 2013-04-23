@@ -19,8 +19,9 @@ I used  <a href="http://mrdoob.github.io/three.js/">ThreeJS API</a> for this gam
 <br>
 <br>
 <b>Screenshots</b>:
+<br>
 <img src="http://www.techjini.com/blog/wp-content/uploads/2013/04/Snake_Game_1.png">
 <br><br>
 <img src="http://www.techjini.com/blog/wp-content/uploads/2013/04/Snake_Game_2.png">
-<br><br>
--Samir Solanki
+<br>
+-<a href="http://www.techjini.com/blog/author/samir/">Samir Solanki</a>
